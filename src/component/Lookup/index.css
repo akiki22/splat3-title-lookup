@@ -1,0 +1,34 @@
+.app .main .lookup {
+  width: 750px;
+  padding: 10px 30px;
+}
+
+.app .main .lookup:nth-child(2) {
+  border-left: 1px solid #ccc;
+}
+
+.app .main .lookup input {
+  width: 100%;
+  margin: 10px auto;
+  padding: 8px 0;
+
+  border: 0;
+  border-bottom: 1px solid #ccc;
+  font-size: 1rem;
+  color: #333;
+}
+
+.app .main .lookup input:focus {
+  outline: 0;
+  border-bottom: 1px solid #333;
+}
+
+.app .main .lookup input::placeholder {
+  color: #999;
+}
+
+.app .main .lookup table {
+  margin-top: 10px;
+}
+
+

@@ -1,0 +1,24 @@
+.app .main .lookup table tr {
+  /* width: 600px; */
+  margin-top: 3px;
+  /* display: flex; */
+  /* justify-content: space-between; */
+}
+
+.app .main .lookup table td {
+  width: 250px;
+  margin-left: 20px;
+  font: 1rem/1.5 monospace;
+}
+
+.app .main .lookup table td:nth-child(1) {
+  color: #22ad61;
+}
+
+.app .main .lookup table td:nth-child(2) {
+  color: #f8512e;
+}
+
+.app .main .lookup table td:nth-child(3) {
+  color: #3053d3;
+}
