@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/splat3-title-lookup/static/css/main.a5324460.css",
+    "main.css": "/splat3-title-lookup/static/css/main.df029f80.css",
     "main.js": "/splat3-title-lookup/static/js/main.3585ebc0.js",
     "index.html": "/splat3-title-lookup/index.html",
-    "main.a5324460.css.map": "/splat3-title-lookup/static/css/main.a5324460.css.map",
+    "main.df029f80.css.map": "/splat3-title-lookup/static/css/main.df029f80.css.map",
     "main.3585ebc0.js.map": "/splat3-title-lookup/static/js/main.3585ebc0.js.map"
   },
   "entrypoints": [
-    "static/css/main.a5324460.css",
+    "static/css/main.df029f80.css",
     "static/js/main.3585ebc0.js"
   ]
 }
