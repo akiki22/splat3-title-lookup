@@ -1,34 +1,47 @@
 .app .main .lookup {
-  width: 750px;
-  padding: 10px 30px;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #2a2e35;
 }
 
-.app .main .lookup:nth-child(2) {
-  border-left: 1px solid #ccc;
+.app .main .lookup header {
+  width: 100%;
 }
 
 .app .main .lookup input {
   width: 100%;
-  margin: 10px auto;
-  padding: 8px 0;
+  padding: 8px;
 
   border: 0;
-  border-bottom: 1px solid #ccc;
+  border: 1px solid #999;
+  border-radius: 6px;
+  background-color: transparent;
+
+  text-align: center;
   font-size: 1rem;
-  color: #333;
+  color: #fff;
 }
 
 .app .main .lookup input:focus {
   outline: 0;
-  border-bottom: 1px solid #333;
+  border: 1px solid #fff;
 }
 
 .app .main .lookup input::placeholder {
   color: #999;
 }
 
-.app .main .lookup table {
+.app .main .lookup .table {
+  width: 100%;
+  height: 50vh;
   margin-top: 10px;
+  overflow: auto;
+}
+
+.app .main .lookup .table table {
+  width: 100%;
 }
 
 

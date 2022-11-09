@@ -6,25 +6,28 @@
 
 html {
   font: normal 16px/1.5 monospace;
+  background-color: #000;
 }
 
 .app {
-  width: 1500px;
-  margin: 20px auto 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .app h1 {
-  padding: 20px 0;
-  border-radius: 30px;
+  width: 100%;
+  padding: 10px 0;
   text-align: center;
-  font: bold 2rem/1.5 monospace;
-  color: #333;
-  /* background-color: #fafb6b; */
+  font: bold 1.5rem/1.5 monospace;
+  color: #fff;
+  background-color: #000;
+}
+
+.app h1 span:first-child {
+  color: #ffff55;
 }
 
 .app .main {
-  /* margin-top: 20px; */
-  display: flex;
-  border: 1px solid #ccc;
-  /* border-radius: 10px; */
+  width: 100%;
 }

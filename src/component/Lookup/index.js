@@ -31,23 +31,16 @@ export default class Lookup extends Component {
             onChange={this.handleInputChange}>
           </input>
         </header>
-        <table>
-          {/* <thead>
-            <tr>
-            {
-              langs.map(lang => (
-                <th>{lang}</th>
-              ))
-            }
-            </tr>
-          </thead> */}
-          <tbody>
-            {
-              matchedTitles.map(titleObj =>
-                <Row key={titleObj.id} langs={langs} titleObj={titleObj} />)
-            }
-          </tbody>
-        </table>
+        <div className='table'>
+          <table>
+            <tbody>
+              {
+                matchedTitles.map(titleObj =>
+                  <Row key={titleObj.id} langs={langs} titleObj={titleObj} />)
+              }
+            </tbody>
+          </table>
+        </div>
         <footer></footer>
       </div>
     )

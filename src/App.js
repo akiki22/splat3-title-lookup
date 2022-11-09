@@ -76,22 +76,25 @@ export default class App extends Component {
 
 
   render() {
-    const { langs, adjective, subject,  } = this.state
+    const { langs, adjective, subject, } = this.state
 
     return (
       <div className='app'>
-        <h1>Splatoon 3 中/日/英称号速查</h1>
+        <h1>
+          <span>Splatoon 3</span> <br />
+          <span>中/日/英称号速查</span>
+        </h1>
         <div className='main'>
           <Lookup
             langs={langs}
             allTitles={adjective}
-            placeholder={'查找前缀'}
+            placeholder={'搜索前缀'}
             getMatchedTitles={this.getMatchedTitles}
           />
           <Lookup
             langs={langs}
             allTitles={subject}
-            placeholder={'查找后缀'}
+            placeholder={'搜索后缀'}
             getMatchedTitles={this.getMatchedTitles}
           />
         </div>
