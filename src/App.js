@@ -6,7 +6,7 @@ import './App.css'
 
 export default class App extends Component {
   state = {
-    langs: ['CNzh', 'JPja', 'USen'],
+    langs: ['CNzh', 'JPja', 'USen', 'EUfr'],
     adjective: {},
     subject: {},
   }
@@ -17,8 +17,8 @@ export default class App extends Component {
 
     const { langs } = this.state
 
-    // 删除日文注音
-    const ruby = /\[(ruby=".*"|\/ruby)\]/gi
+    // 删除[]中的内容
+    const bracket = /\[.+?\]/gi
 
     langs.forEach(lang => {
       const url = `https://leanny.github.io/splat3/data/language/${lang}.json`
@@ -34,18 +34,18 @@ export default class App extends Component {
 
           for (let id in currentAdj) {
             if (!adjective.hasOwnProperty(id)) {
-              adjective[id] = {}
+              adjective[id] = { id: id }
             }
-            adjective[id][lang] = currentAdj[id].replace(ruby, '')
+            adjective[id][lang] = currentAdj[id].replace(bracket, '')
           }
 
           for (let id in currentSub) {
             // 去掉id为xxxx_1的多余数据
             if (id[5] === '1') continue
             if (!subject.hasOwnProperty(id)) {
-              subject[id] = {}
+              subject[id] = { id: id }
             }
-            subject[id][lang] = currentSub[id].replace(ruby, '')
+            subject[id][lang] = currentSub[id].replace(bracket, '')
           }
 
           this.setState({
@@ -82,8 +82,9 @@ export default class App extends Component {
       <div className='app'>
         <h1>
           <span>Splatoon 3</span> <br />
-          <span>中/日/英称号速查</span>
+          <span>中/日/英/法称号速查</span>
         </h1>
+
         <div className='main'>
           <Lookup
             langs={langs}
@@ -99,6 +100,19 @@ export default class App extends Component {
           />
         </div>
 
+        <footer>
+          <p>
+            Author: &nbsp;
+            <span>@Aki!</span>
+            &nbsp; from 蛮颓镇扶贫促进就业发展群🦑🐙
+          </p>
+          <p>
+            Data Source: &nbsp;
+            <a href='https://leanny.github.io/splat3/database.html'>
+              leanny.github.io/splat3/database.html
+            </a>
+          </p>
+        </footer>
       </div>
 
     )

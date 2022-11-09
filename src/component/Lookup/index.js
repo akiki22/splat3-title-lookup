@@ -41,7 +41,6 @@ export default class Lookup extends Component {
             </tbody>
           </table>
         </div>
-        <footer></footer>
       </div>
     )
   }

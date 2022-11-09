@@ -7,8 +7,8 @@ export default class Row extends Component {
     return (
       <tr>
         {
-          langs.map(lang => (
-            <td key={lang}>
+          langs.map((lang, index) => (
+            <td key={index}>
               {titleObj[lang]}
             </td>
           ))

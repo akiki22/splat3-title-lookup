@@ -4,6 +4,11 @@
   box-sizing: border-box;
 }
 
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
 html {
   font: normal 16px/1.5 monospace;
   background-color: #000;
@@ -28,6 +33,16 @@ html {
   color: #ffff55;
 }
 
+.app p {
+  color: #fff;
+}
+
 .app .main {
   width: 100%;
+}
+
+.app footer {
+  padding: 15px 10px;
+  font-size: .9rem;
+  color: #999;
 }
